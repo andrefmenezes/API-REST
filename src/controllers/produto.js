@@ -26,7 +26,7 @@ async create(request,response){
               //console.log('[DEBUG] USUARIO REQ:', usuario)      
       
         await knex('table_prod').insert(produto);
-        await estrutura.criar(codigo,qtd,desc);
+        await estrutura.criarTxt(codigo,qtd,desc);
         
          return response.json(produto)
      }
@@ -63,7 +63,7 @@ async create(request,response){
     
       await knex('table_prod').where('id', request.params.id)
      .update(atualizar)
-     await estrutura.criar(codigo,qtd,desc);
+     await estrutura.criarTxt(codigo,qtd,desc);
      return response.json({msg: 'ok'});
   }
  

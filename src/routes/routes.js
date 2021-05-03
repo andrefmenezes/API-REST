@@ -6,4 +6,5 @@ const produto = new Produto();
 routes.get("/produto",produto.show);
 routes.post("/produto",produto.create);
 routes.put("/produto/:id",produto.atualizar)
+routes.delete("/produto/:id",produto.delete)
 module.exports = routes;
